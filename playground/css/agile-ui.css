@@ -137,10 +137,10 @@ footer.footer .ui.segment {
   width: 100%;
 }
 .example .examplePreview .exampleLayout[data-layout="tablet"] {
-  width: 788px;
+  width: 810px;
 }
 .example .examplePreview .exampleLayout[data-layout="mobile"] {
-  width: 500px;
+  width: 522px;
 }
 .example .examplePreview .exampleLayout iframe.ui.segment {
   padding: 10px;

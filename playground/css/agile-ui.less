@@ -165,10 +165,10 @@ footer.footer {
         width: 100%;
       }
       &[data-layout="tablet"] {
-        width: @tabletWidth + @examplePadding*2;
+        width: @tabletWidth + @examplePadding*4 + 2px;
       }
       &[data-layout="mobile"] {
-        width: @mobileWidth + @examplePadding*2;
+        width: @mobileWidth + @examplePadding*4 + 2px;
       }
       iframe.ui.segment {
         padding: @examplePadding;
@@ -317,9 +317,6 @@ body {
   .mainContainer, .ui.container, .footer {
     width: 100%;
   }
-  // .sidebarPreview {
-  //   display: none;
-  // }
 }
 
 @media (max-width: (@tabletWidth - 1px)) {
