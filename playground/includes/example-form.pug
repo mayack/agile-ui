@@ -1,0 +1,17 @@
+html
+  link(href='../css/semantic.min.css' rel='stylesheet' type='text/css')
+body(style='background:transparent')
+  form#atk_admin_form.ui.form
+    .field
+      label(for='atk_admin_form_generic_name_input') Name
+      #atk_admin_form_generic_name.ui.input(style='')
+        input#atk_admin_form_generic_name_input(name='name', type='text', placeholder='', value='')
+    .field
+      label(for='atk_admin_form_generic_email_input') Email
+      #atk_admin_form_generic_email.ui.input(style='')
+        input#atk_admin_form_generic_email_input(name='email', type='text', placeholder='', value='')
+    .field
+      #atk_admin_form_generic_is_accept_terms.ui.checkbox(style='')
+        input#atk_admin_form_generic_is_accept_terms_input.hidden(type='checkbox', name='is_accept_terms', tabindex='0')
+        label Is Accept Terms
+    #atk_admin_form_generic_button.ui.primary.button(style='') Save

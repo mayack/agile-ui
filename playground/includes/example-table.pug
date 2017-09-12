@@ -1,0 +1,69 @@
+html
+  link(href='../css/semantic.min.css' rel='stylesheet' type='text/css')
+body(style='background:transparent')
+  #atk_admin_view.ui.buttons(style='')
+    #atk_admin_view_button.ui.labeled.icon.button(style='')
+      i#atk_admin_view_button_icon.refresh.icon(style='')
+      | Refresh Table
+  table#atk_admin_table.ui.celled.table(style='')
+    thead
+      tr
+        th Name
+        th Surname
+        th Title
+        th Date
+        th.right.aligned.single.line(class='{$_money_class}') Salary
+    tbody
+      tr(data-id='1')
+        td
+          a(href='details.php?id=%7B%24id%7D')
+            .ui.ribbon.label Dr. Vance O'Keefe
+        td.warning Kelvin Bednar
+        td.negative.single.line
+          i.icon.close
+          |  Dr.
+        td 2013-06-14
+        td.right.aligned.single.line € 90,750,210.00
+      tr(data-id='2')
+        td
+          a(href='details.php?id=%7B%24id%7D') Vidal Paucek
+        td.warning Claudie Funk
+        td
+          i.icon
+          |  Miss
+        td 1997-08-13
+        td.right.aligned.single.line € 67.00
+      tr(data-id='3')
+        td
+          a(href='details.php?id=%7B%24id%7D') Barney Heathcote
+        td.warning Prof. Ryan Wisozk PhD
+        td
+          i.icon
+          |  Mrs.
+        td 2014-04-03
+        td.right.aligned.single.line € 4.00
+      tr(data-id='4')
+        td
+          a(href='details.php?id=%7B%24id%7D') Dr. Kris Bailey
+        td.warning Prof. Skylar Orn MD
+        td
+          i.icon
+          |  Ms.
+        td 1979-02-08
+        td.right.aligned.single.line € 16.00
+      tr(data-id='5')
+        td
+          a(href='details.php?id=%7B%24id%7D') Pietro O'Kon
+        td.warning Gust Kuphal
+        td
+          i.icon
+          |  Mrs.
+        td 1990-12-15
+        td.right.aligned.single.line € 4,724.00
+    tfoot
+      tr
+        th Totals:
+        th -
+        th -
+        th -
+        th.right.aligned.single.line(class='{$_money_class}') € 90,755,021.00

@@ -1,0 +1,365 @@
+// Import
+
+@import 'semantic.min.css';
+@import 'prism.min.css';
+@import 'codeflask.css';
+
+
+// Variables
+
+@desktopLargeWidth: 1440px;
+@desktopWidth: 992px;
+@tabletWidth: 768px;
+@mobileWidth: 480px;
+@leftMenuWidth: 16em;
+@contentWidth: 40em;
+@previewWidth: 30vw;
+@contentPadding: 3em;
+
+
+// Layout
+
+.ui.visible.left.sidebar {
+  ~ header.topMenu.ui.menu.fixed {
+    -webkit-transform: none; 
+    transform: none;
+  }
+}
+.mainLayout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.topMenuGhost.ui.menu {
+  display: none;
+  margin: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+header.topMenu.ui.fixed.menu {
+  left: 0;
+  ~ .topMenuGhost {
+    display: block;
+  }
+}
+footer.footer,
+.mainContainer {
+  box-sizing: content-box;
+}
+.mainContainer {
+  position: relative;
+  z-index: 2;
+  >.ui.main {
+    box-sizing: border-box;
+  }
+}
+footer.footer {
+  .ui.divider, .ui.segment {
+    margin: 0;
+  }
+}
+.ui.left.sidebar {
+  width: @leftMenuWidth;
+  z-index: 103;
+  .item.leftMenuClose {
+    display: none;
+    padding: 0.5em;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    i.icon {
+      margin-left: 0 !important;
+    }
+    &:before {
+      background: none;
+    }
+  }
+  .logo {
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    padding: 0.5em 0;
+    svg {
+    }
+    h3 {
+      margin: 0 0 0 0.75em;
+    }
+  }
+}
+
+
+// Components
+
+.ui.table.overflow-auto {
+  overflow: auto;
+  >.ui.table {
+    border: none;
+  }
+}
+.cell-expanded {
+  min-width: 320px;
+  max-width: 640px;
+  white-space: normal
+}
+.overlay.pushable {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 102;
+  .pusher {
+    &:after {
+      height: 100%;
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}
+.example {
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 3em;
+  }
+  .exampleCodeBox {
+    padding: 0;
+    .exampleCode {
+      height: 50vh;
+      ~ * {
+        margin: 0;
+      }
+    }
+  }
+  .exampleMenu.ui.menu {
+    font-size: 0.875rem;
+  }
+  .examplePreview {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    &.ui[class*="very padded"].segment {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+    header {
+      flex-grow: 0;
+    }
+    .exampleLayout {
+      flex-grow: 1;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: auto;
+      position: relative;
+      width: 100%;
+      &, &[data-layout="desktop"] {
+        max-width: 100%;
+      }
+      &[data-layout="tablet"] {
+        max-width: @tabletWidth;
+      }
+      &[data-layout="mobile"] {
+        max-width: @mobileWidth;
+      }
+      iframe {
+        background: none;
+        border: none;
+        width: 100%;
+      }
+    }
+  }
+  >.ui.rail {
+    // left: -@contentPadding;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    // z-index: -1;
+  }
+}
+.sidebarPreview {
+  background-color: #f5f5f5;
+  content: '';
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  // width: 50vw;
+  width: 100%;
+  z-index: 1;
+}
+.clearFix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+    width: 100%;
+  }
+}
+
+
+// Adjustments
+
+.codeFlask__textarea, .codeFlask__pre, code[class*="language-"], pre[class*="language-"] {
+  font-size: 0.825rem;
+}
+
+
+// Responsive
+
+.show-tablet {
+  display: none !important;
+}
+
+@media (min-width: (@desktopLargeWidth + 1)) {
+  .mainContainer, .footer {
+    width: @contentWidth;
+  }
+  .mainContainer .example .ui.right.rail {
+    padding: 0 0 0 @contentWidth;
+  }
+  .sidebarPreview {
+    left: @contentWidth;
+  }
+  .ui.visible.left.sidebar {
+    ~ .topMenu {
+      padding-left: @leftMenuWidth;
+    }
+    ~ .sidebarPreview {
+      left: @contentWidth + @leftMenuWidth;
+    }
+    ~ .mainContainer .example .ui.right.rail {
+      left: -(@leftMenuWidth + @contentPadding);
+      padding: 0 0 0 @leftMenuWidth + @contentWidth;
+    }
+     ~ .mainContainer, ~ .footer {
+      padding-left: @leftMenuWidth;
+    }
+  }
+}
+@media (max-width: @desktopLargeWidth) {
+  .sidebarPreview {
+    left: @contentWidth;
+  }
+  .mainContainer .example .ui.right.rail {
+    padding: 0 0 0 @contentWidth;
+  }
+  header.topMenu.ui.menu.fixed {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    left: 0;
+    width: 100% !important;
+  }
+  .ui.left.sidebar {
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+    &.visible {
+      ~ header.topMenu.ui.menu.fixed,
+      ~ .mainContainer,
+      ~ footer.footer {
+        left: 0;
+        padding-left: 0;
+      }
+    }
+  }
+  .mainContainer, .footer {
+    width: @contentWidth;
+  }
+  .example>.ui.rail {
+    padding-left: @contentWidth;
+  }
+  body.leftMenu-visible {
+    &:after {
+      left: 0;
+      position: fixed;
+      top: 0;      
+    }
+    .ui.left.sidebar {
+      opacity: 1;
+      pointer-events: auto;
+      .leftMenuClose {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktopWidth) {
+  .example {
+    .examplePreview .exampleLayout iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+    >.ui.rail {
+      left: -@contentPadding;
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: (@desktopWidth - 1px)) {
+  .mainContainer .example > .ui.right.rail {
+    left: 0;
+    margin-top: @contentPadding;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    &, .examplePreview.ui[class*="very padded"].segment {
+      height: auto;
+    }
+    .examplePreview.ui[class*="very padded"].segment {
+      padding: 0;
+    }
+  }
+  .example .examplePreview .exampleLayout iframe {
+    height: auto;
+  }
+  .mainContainer, .ui.container, .footer {
+    width: 100%;
+  }
+  .sidebarPreview {
+    display: none;
+  }
+}
+
+@media (max-width: (@tabletWidth - 1px)) {
+  .hide-tablet {
+    display: none !important;
+  }
+  .show-tablet {
+    display: block !important;
+  }
+  body.leftMenu-visible {
+    overflow: hidden;
+  }
+  .mainContainer>.ui.main.container {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+  .ui.left.sidebar {
+    width: 100%;
+  }
+}
+
+
+// Print
+
+@media print {
+  .ui.visible.left.sidebar ~ .mainContainer,
+  .ui.visible.left.sidebar ~ footer.footer {
+    padding-left: 0;
+  }
+  .ui.left.sidebar, .topMenu, .topMenuGhost {
+    display: none !important;
+  }
+}

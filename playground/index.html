@@ -1,0 +1,164 @@
+
+<html>
+  <head>
+    <title>Agile UI: Playground</title>
+    <link href="css/agile-ui.css" type="text/css" rel="stylesheet"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/prism.min.js" async="async"></script>
+    <script src="js/codeflask.js" async="async"></script>
+    <script src="js/agile-ui.js"></script>
+  </head>
+  <body>
+    <div class="mainLayout">
+      <aside class="ui left vertical inverted labeled visible sidebar menu leftMenu">
+        <div class="item">
+          <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256" width="32" height="32">
+              <path fill="#fff" d="M256,144l0-32l-44.1,0L132,191.9c-12.7,0.8-25.5-2.2-36.5-8.7L229.8,48.8l-22.6-22.6l-23.6,23.6              c-11.6-8.2-25-14-39.6-16.4L144,0l-32,0l0,33.3c-14.6,2.4-28.1,8.2-39.6,16.4L48.8,26.2L26.2,48.8l23.6,23.6              c-8.2,11.6-14,25-16.4,39.6L0,112l0,32l44.1,0L124,64.1c12.7-0.8,25.5,2.2,36.5,8.7L26.2,207.2l22.6,22.6l23.6-23.6              c11.6,8.2,25,14,39.6,16.4l0,33.3l32,0l0-33.3c14.6-2.4,28.1-8.2,39.6-16.4l23.6,23.6l22.6-22.6l-23.6-23.6              c8.2-11.6,14-25,16.4-39.6L256,144z"></path>
+            </svg>
+            <h3>Demo Suite</h3>
+          </div>
+        </div>
+        <div class="item show-tablet"><a class="fluid ui green basic button" href="javascript:void(0)">Download Agile UI 1.1.10</a></div><a class="item header" href="javascript:void(0)"><i class="rocket icon"></i>Getting Started</a><a class="item header" href="javascript:void(0)"><i class="block layout icon"></i>Layouts</a>
+        <div class="item"><i class="browser icon"></i><a class="header" href="javascript:void(0)">Form</a>
+          <div class="menu"><a class="item" href="javascript:void(0)">Level 2</a><a class="item" href="javascript:void(0)">Level 2</a><a class="item" href="javascript:void(0)">Level 2</a>
+            <div class="item menu"><a class="item" href="javascript:void(0)">Level 3</a><a class="item" href="javascript:void(0)">Level 3</a><a class="item" href="javascript:void(0)">Level 3</a></div>
+          </div>
+        </div>
+        <div class="item"><i class="table icon"></i><a class="header" href="javascript:void(0)">Grid and Table</a>
+          <div class="menu"><a class="item" href="javascript:void(0)">Level 2</a><a class="item" href="javascript:void(0)">Level 2</a><a class="item" href="javascript:void(0)">Level 2</a></div>
+        </div>
+        <div class="item"><i class="cubes icon"></i><a class="header" href="javascript:void(0)">Basics</a>
+          <div class="menu"><a class="item" href="javascript:void(0)">Level 2</a><a class="item" href="javascript:void(0)">Level 2</a><a class="item" href="javascript:void(0)">Level 2</a></div>
+        </div>
+        <div class="item"><i class="hand pointer icon"></i><a class="header" href="javascript:void(0)">Interactivity</a>
+          <div class="menu"><a class="item" href="javascript:void(0)">Level 2</a><a class="item" href="javascript:void(0)">Level 2</a><a class="item" href="javascript:void(0)">Level 2</a></div>
+        </div>
+      </aside>
+      <aside class="sidebarPreview"></aside>
+      <header class="ui fixed horizontal menu topMenu"><a class="icon item leftMenuTrigger" href="javascript:void(0)"><i class="sidebar icon"></i></a>
+        <div class="ui category search item">
+          <div class="ui transparent icon input">
+            <input class="prompt" type="text" placeholder="Search docs..."/><i class="search link icon"></i>
+          </div>
+          <div class="results"></div>
+        </div>
+        <div class="right menu">
+          <div class="item hide-tablet">
+            <div class="ui green basic button">Download Agile UI 1.1.10</div>
+          </div><a class="item hide-tablet" href="javascript:void(0)"><i class="plus icon"></i>Add example</a>
+          <div class="ui right dropdown item"><img class="ui avatar image" src="images/matt.jpg"/><i class="angle down icon"></i>
+            <div class="menu">
+              <div class="item">My examples</div>
+              <div class="item">Settings</div>
+              <div class="item">Log out</div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="topMenuGhost ui menu"><span class="item"></span></div>
+      <main class="mainContainer">
+        <div class="ui main container basic segment very padded">
+          <h1>Heading</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius optio quaerat fugiat, eveniet incidunt quam voluptatibus vel quia illo cum aliquid perferendis tempora accusamus vitae, maxime rerum. Non, doloribus, quo.</p>
+          <div class="example">
+            <div class="ui pointing secondary menu"><a class="active item" data-tab="first">UI</a><a class="item" data-tab="second">Model</a><a class="item" data-tab="third">Persistence</a></div>
+            <div class="ui active tab" data-tab="first">
+              <div class="ui segment exampleCodeBox">
+                <div class="exampleCode" data-language="php">class User extends \atk4\data\Model
+{
+    function init() {
+        parent::init();
+
+        $this->addField('name');
+        $this->addField('email');
+    }
+}
+                </div>
+                <div class="ui divider"></div>
+                <div class="ui basic segment"><a href="javascript:void(0)"><i class="play icon"></i>Run Code</a></div>
+              </div>
+            </div>
+            <div class="ui tab" data-tab="second">
+              <div class="ui segment exampleCodeBox">
+                <div class="exampleCode" data-language="php">class User extends \atk4\data\Model
+{
+    function init() {
+        parent::init();
+
+        $this->addField('name');
+        $this->addField('email');
+    }
+}
+                </div>
+                <div class="ui divider"></div>
+                <div class="ui basic segment"><a href="javascript:void(0)"><i class="play icon"></i>Run Code</a></div>
+              </div>
+            </div>
+            <div class="ui tab" data-tab="third">
+              <div class="ui segment exampleCodeBox">
+                <div class="exampleCode" data-language="html">&lt;div&gt;Test3&lt;/div&gt;</div>
+                <div class="ui divider"></div>
+                <div class="ui basic segment"><a href="javascript:void(0)"><i class="play icon"></i>Run Code</a></div>
+              </div>
+            </div>
+            <div class="ui right rail">
+              <div class="examplePreview ui basic segment very padded">
+                <header>
+                  <div class="ui horizontal divider"><small>Example Preview</small></div>
+                  <div class="ui three item secondary menu exampleMenu"><a class="item" href="javascript:void(0)" onclick="$(this).parents(&quot;header&quot;).siblings(&quot;.exampleLayout&quot;).attr(&quot;data-layout&quot;,&quot;mobile&quot;);$(this).siblings(&quot;.active&quot;).removeClass(&quot;active&quot;);$(this).addClass(&quot;active&quot;);"><i class="mobile icon"></i>Mobile</a><a class="item" href="javascript:void(0)" onclick="$(this).parents(&quot;header&quot;).siblings(&quot;.exampleLayout&quot;).attr(&quot;data-layout&quot;,&quot;tablet&quot;);$(this).siblings(&quot;.active&quot;).removeClass(&quot;active&quot;);$(this).addClass(&quot;active&quot;);"><i class="tablet icon"></i>Tablet</a><a class="item active" href="javascript:void(0)" onclick="$(this).parents(&quot;header&quot;).siblings(&quot;.exampleLayout&quot;).attr(&quot;data-layout&quot;,&quot;desktop&quot;);$(this).siblings(&quot;.active&quot;).removeClass(&quot;active&quot;);$(this).addClass(&quot;active&quot;);"><i class="computer icon"></i>Desktop</a></div>
+                  <div class="ui hidden divider"></div>
+                </header>
+                <div class="exampleLayout" data-layout="desktop">
+                  <iframe src="includes/example-grid.html" onload="resizeIframe(this)"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius optio quaerat fugiat, eveniet incidunt quam voluptatibus vel quia illo cum aliquid perferendis tempora accusamus vitae, maxime rerum. Non, doloribus, quo.</p>
+          <div class="example">
+            <div class="ui pointing secondary menu"><a class="active item" data-tab="first">PHP</a><a class="item" data-tab="second">HTML</a><a class="item" data-tab="third">CSS</a></div>
+            <div class="ui active tab" data-tab="first">
+              <div class="ui segment exampleCodeBox">
+                <div class="exampleCode" data-language="html">&lt;div&gt;Test1&lt;/div&gt;</div>
+                <div class="ui divider"></div>
+                <div class="ui basic segment"><a href="javascript:void(0)"><i class="play icon"></i>Run Code</a></div>
+              </div>
+            </div>
+            <div class="ui tab" data-tab="second">
+              <div class="ui segment exampleCodeBox">
+                <div class="exampleCode" data-language="html">&lt;div&gt;Test2&lt;/div&gt;</div>
+                <div class="ui divider"></div>
+                <div class="ui basic segment"><a href="javascript:void(0)"><i class="play icon"></i>Run Code</a></div>
+              </div>
+            </div>
+            <div class="ui tab" data-tab="third">
+              <div class="ui segment exampleCodeBox">
+                <div class="exampleCode" data-language="html">&lt;div&gt;Test3&lt;/div&gt;</div>
+                <div class="ui divider"></div>
+                <div class="ui basic segment"><a href="javascript:void(0)"><i class="play icon"></i>Run Code</a></div>
+              </div>
+            </div>
+            <div class="ui right rail">
+              <div class="examplePreview ui basic segment very padded">
+                <header>
+                  <div class="ui horizontal divider"><small>Example Preview</small></div>
+                  <div class="ui three item secondary menu exampleMenu"><a class="item" href="javascript:void(0)" onclick="$(this).parents(&quot;header&quot;).siblings(&quot;.exampleLayout&quot;).attr(&quot;data-layout&quot;,&quot;mobile&quot;);$(this).siblings(&quot;.active&quot;).removeClass(&quot;active&quot;);$(this).addClass(&quot;active&quot;);"><i class="mobile icon"></i>Mobile</a><a class="item" href="javascript:void(0)" onclick="$(this).parents(&quot;header&quot;).siblings(&quot;.exampleLayout&quot;).attr(&quot;data-layout&quot;,&quot;tablet&quot;);$(this).siblings(&quot;.active&quot;).removeClass(&quot;active&quot;);$(this).addClass(&quot;active&quot;);"><i class="tablet icon"></i>Tablet</a><a class="item active" href="javascript:void(0)" onclick="$(this).parents(&quot;header&quot;).siblings(&quot;.exampleLayout&quot;).attr(&quot;data-layout&quot;,&quot;desktop&quot;);$(this).siblings(&quot;.active&quot;).removeClass(&quot;active&quot;);$(this).addClass(&quot;active&quot;);"><i class="computer icon"></i>Desktop</a></div>
+                  <div class="ui hidden divider"></div>
+                </header>
+                <div class="exampleLayout" data-layout="desktop">
+                  <iframe src="includes/example-table.html" onload="resizeIframe(this)"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="ui divider"></div>
+        <div class="ui center aligned basic segment">Made with <a href="http://agiletoolkit.org/" target="_blank">Agile Toolkit</a></div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+html
+  head
+    title Agile UI: Playground
+    link(href='css/agile-ui.css' type='text/css' rel='stylesheet')
+    script(src='js/jquery.min.js')
+    script(src='js/semantic.min.js')
+    script(src='js/prism.min.js' async)
+    script(src='js/codeflask.js' async)
+    script(src='js/agile-ui.js')
+  body
+    .mainLayout
+      aside.ui.left.vertical.inverted.labeled.visible.sidebar.menu.leftMenu
+        .item
+          .logo
+            svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 256 256' width='32' height='32')
+              path(fill='#fff' d='M256,144l0-32l-44.1,0L132,191.9c-12.7,0.8-25.5-2.2-36.5-8.7L229.8,48.8l-22.6-22.6l-23.6,23.6\
+              c-11.6-8.2-25-14-39.6-16.4L144,0l-32,0l0,33.3c-14.6,2.4-28.1,8.2-39.6,16.4L48.8,26.2L26.2,48.8l23.6,23.6\
+              c-8.2,11.6-14,25-16.4,39.6L0,112l0,32l44.1,0L124,64.1c12.7-0.8,25.5,2.2,36.5,8.7L26.2,207.2l22.6,22.6l23.6-23.6\
+              c11.6,8.2,25,14,39.6,16.4l0,33.3l32,0l0-33.3c14.6-2.4,28.1-8.2,39.6-16.4l23.6,23.6l22.6-22.6l-23.6-23.6\
+              c8.2-11.6,14-25,16.4-39.6L256,144z')
+            h3 Demo Suite
+        .item.show-tablet
+          a.fluid.ui.green.basic.button(href='javascript:void(0)') Download Agile UI 1.1.10
+        a.item.header(href='javascript:void(0)')
+          i.rocket.icon
+          | Getting Started
+        a.item.header(href='javascript:void(0)')
+          i.block.layout.icon
+          | Layouts
+        .item
+          i.browser.icon
+          a.header(href='javascript:void(0)') Form
+          .menu
+            a.item(href='javascript:void(0)') Level 2
+            a.item(href='javascript:void(0)') Level 2
+            a.item(href='javascript:void(0)') Level 2
+            .item.menu
+              a.item(href='javascript:void(0)') Level 3
+              a.item(href='javascript:void(0)') Level 3
+              a.item(href='javascript:void(0)') Level 3
+        .item
+          i.table.icon
+          a.header(href='javascript:void(0)') Grid and Table
+          .menu
+            a.item(href='javascript:void(0)') Level 2
+            a.item(href='javascript:void(0)') Level 2
+            a.item(href='javascript:void(0)') Level 2
+        .item
+          i.cubes.icon
+          a.header(href='javascript:void(0)') Basics
+          .menu
+            a.item(href='javascript:void(0)') Level 2
+            a.item(href='javascript:void(0)') Level 2
+            a.item(href='javascript:void(0)') Level 2
+        .item
+          i.hand.pointer.icon
+          a.header(href='javascript:void(0)') Interactivity
+          .menu
+            a.item(href='javascript:void(0)') Level 2
+            a.item(href='javascript:void(0)') Level 2
+            a.item(href='javascript:void(0)') Level 2
+      aside.sidebarPreview
+      header.ui.fixed.horizontal.menu.topMenu
+        a.icon.item.leftMenuTrigger(href='javascript:void(0)') #[i.sidebar.icon]
+        .ui.category.search.item
+          .ui.transparent.icon.input
+            input.prompt(type='text', placeholder='Search docs...')
+            i.search.link.icon
+          .results
+        .right.menu
+          .item.hide-tablet
+            .ui.green.basic.button Download Agile UI 1.1.10
+          a.item.hide-tablet(href='javascript:void(0)') #[i.plus.icon]Add example
+          .ui.right.dropdown.item
+            img.ui.avatar.image(src='images/matt.jpg')
+            i.angle.down.icon
+            .menu
+              .item My examples
+              .item Settings
+              .item Log out
+      .topMenuGhost.ui.menu
+        span.item
+      main.mainContainer
+        .ui.main.container.basic.segment.very.padded
+          h1 Heading
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius optio quaerat fugiat, eveniet incidunt quam voluptatibus vel quia illo cum aliquid perferendis tempora accusamus vitae, maxime rerum. Non, doloribus, quo.
+          .example
+            .ui.pointing.secondary.menu
+              a.active.item(data-tab='first') UI
+              a.item(data-tab='second') Model
+              a.item(data-tab='third') Persistence
+            .ui.active.tab(data-tab='first')
+              .ui.segment.exampleCodeBox
+                .exampleCode(data-language='php')
+                  include includes/example-model.txt
+                .ui.divider
+                .ui.basic.segment
+                  a(href='javascript:void(0)')
+                    i.play.icon
+                    | Run Code
+            .ui.tab(data-tab='second')
+              .ui.segment.exampleCodeBox
+                .exampleCode(data-language='php')
+                  include includes/example-model.txt
+                .ui.divider
+                .ui.basic.segment
+                  a(href='javascript:void(0)')
+                    i.play.icon
+                    | Run Code
+            .ui.tab(data-tab='third')
+              .ui.segment.exampleCodeBox
+                .exampleCode(data-language='html')= '<div>Test3</div>'
+                .ui.divider
+                .ui.basic.segment
+                  a(href='javascript:void(0)')
+                    i.play.icon
+                    | Run Code
+            .ui.right.rail
+              .examplePreview.ui.basic.segment.very.padded
+                header
+                  .ui.horizontal.divider #[small Example Preview]
+                  .ui.three.item.secondary.menu.exampleMenu
+                    a.item(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","mobile");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.mobile.icon]Mobile
+                    a.item(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","tablet");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.tablet.icon]Tablet
+                    a.item.active(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","desktop");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.computer.icon]Desktop
+                  .ui.hidden.divider
+                .exampleLayout(data-layout='desktop')
+                  //- include includes/example-form
+                  //- iframe(src='includes/example-form.html')
+                  iframe(src='includes/example-grid.html' onload="resizeIframe(this)")
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius optio quaerat fugiat, eveniet incidunt quam voluptatibus vel quia illo cum aliquid perferendis tempora accusamus vitae, maxime rerum. Non, doloribus, quo.
+          .example
+            .ui.pointing.secondary.menu
+              a.active.item(data-tab='first') PHP
+              a.item(data-tab='second') HTML
+              a.item(data-tab='third') CSS
+            .ui.active.tab(data-tab='first')
+              .ui.segment.exampleCodeBox
+                .exampleCode(data-language='html')= '<div>Test1</div>'
+                .ui.divider
+                .ui.basic.segment
+                  a(href='javascript:void(0)')
+                    i.play.icon
+                    | Run Code
+            .ui.tab(data-tab='second')
+              .ui.segment.exampleCodeBox
+                .exampleCode(data-language='html')= '<div>Test2</div>'
+                .ui.divider
+                .ui.basic.segment
+                  a(href='javascript:void(0)')
+                    i.play.icon
+                    | Run Code
+            .ui.tab(data-tab='third')
+              .ui.segment.exampleCodeBox
+                .exampleCode(data-language='html')= '<div>Test3</div>'
+                .ui.divider
+                .ui.basic.segment
+                  a(href='javascript:void(0)')
+                    i.play.icon
+                    | Run Code
+            .ui.right.rail
+              .examplePreview.ui.basic.segment.very.padded
+                header
+                  .ui.horizontal.divider #[small Example Preview]
+                  .ui.three.item.secondary.menu.exampleMenu
+                    a.item(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","mobile");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.mobile.icon]Mobile
+                    a.item(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","tablet");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.tablet.icon]Tablet
+                    a.item.active(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","desktop");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.computer.icon]Desktop
+                  .ui.hidden.divider
+                .exampleLayout(data-layout='desktop')
+                  iframe(src='includes/example-table.html' onload="resizeIframe(this)")
+      footer.footer
+        .ui.divider
+        .ui.center.aligned.basic.segment
+          | Made with 
+          a(href='http://agiletoolkit.org/', target='_blank') Agile Toolkit

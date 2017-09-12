@@ -1,0 +1,15 @@
+$form = $app->add(['Form', 'segment']);
+$form->setModel(new User($db), ['email', 'password']);
+
+$form->addField('is_accept_terms', null, ['type'=>'boolean']);
+$form->submitButton->set('Register');
+
+$form->onSubmit(function ($form) {
+    if (!$form->model['is_accept_terms']) {
+        return $form->error('is_accept_terms', 'Please accept terms');
+    }
+
+    $form->model->save();
+
+    return $form->success('Thank you');
+});

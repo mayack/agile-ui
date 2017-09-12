@@ -1,0 +1,67 @@
+
+<html>
+  <link href="../css/semantic.min.css" rel="stylesheet" type="text/css"/>
+</html>
+<body style="background:transparent;">
+  <div class="ui buttons" id="atk_admin_view">
+    <div class="ui labeled icon button" id="atk_admin_view_button"><i class="refresh icon" id="atk_admin_view_button_icon"></i>Refresh Table</div>
+  </div>
+  <table class="ui celled table" id="atk_admin_table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th class="right aligned single line {$_money_class}">Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-id="1">
+        <td><a href="details.php?id=%7B%24id%7D">
+            <div class="ui ribbon label">Dr. Vance O'Keefe</div></a></td>
+        <td class="warning">Kelvin Bednar</td>
+        <td class="negative single line"><i class="icon close"></i> Dr.</td>
+        <td>2013-06-14</td>
+        <td class="right aligned single line">€ 90,750,210.00</td>
+      </tr>
+      <tr data-id="2">
+        <td><a href="details.php?id=%7B%24id%7D">Vidal Paucek</a></td>
+        <td class="warning">Claudie Funk</td>
+        <td><i class="icon"></i> Miss</td>
+        <td>1997-08-13</td>
+        <td class="right aligned single line">€ 67.00</td>
+      </tr>
+      <tr data-id="3">
+        <td><a href="details.php?id=%7B%24id%7D">Barney Heathcote</a></td>
+        <td class="warning">Prof. Ryan Wisozk PhD</td>
+        <td><i class="icon"></i> Mrs.</td>
+        <td>2014-04-03</td>
+        <td class="right aligned single line">€ 4.00</td>
+      </tr>
+      <tr data-id="4">
+        <td><a href="details.php?id=%7B%24id%7D">Dr. Kris Bailey</a></td>
+        <td class="warning">Prof. Skylar Orn MD</td>
+        <td><i class="icon"></i> Ms.</td>
+        <td>1979-02-08</td>
+        <td class="right aligned single line">€ 16.00</td>
+      </tr>
+      <tr data-id="5">
+        <td><a href="details.php?id=%7B%24id%7D">Pietro O'Kon</a></td>
+        <td class="warning">Gust Kuphal</td>
+        <td><i class="icon"></i> Mrs.</td>
+        <td>1990-12-15</td>
+        <td class="right aligned single line">€ 4,724.00</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>Totals:</th>
+        <th>-</th>
+        <th>-</th>
+        <th>-</th>
+        <th class="right aligned single line {$_money_class}">€ 90,755,021.00</th>
+      </tr>
+    </tfoot>
+  </table>
+</body>

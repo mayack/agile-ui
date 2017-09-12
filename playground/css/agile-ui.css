@@ -1,0 +1,320 @@
+@import 'semantic.min.css';
+@import 'prism.min.css';
+@import 'codeflask.css';
+.ui.visible.left.sidebar ~ header.topMenu.ui.menu.fixed {
+  -webkit-transform: none;
+  transform: none;
+}
+.mainLayout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.topMenuGhost.ui.menu {
+  display: none;
+  margin: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+header.topMenu.ui.fixed.menu {
+  left: 0;
+}
+header.topMenu.ui.fixed.menu ~ .topMenuGhost {
+  display: block;
+}
+footer.footer,
+.mainContainer {
+  box-sizing: content-box;
+}
+.mainContainer {
+  position: relative;
+  z-index: 2;
+}
+.mainContainer > .ui.main {
+  box-sizing: border-box;
+}
+footer.footer .ui.divider,
+footer.footer .ui.segment {
+  margin: 0;
+}
+.ui.left.sidebar {
+  width: 16em;
+  z-index: 103;
+}
+.ui.left.sidebar .item.leftMenuClose {
+  display: none;
+  padding: 0.5em;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+.ui.left.sidebar .item.leftMenuClose i.icon {
+  margin-left: 0 !important;
+}
+.ui.left.sidebar .item.leftMenuClose:before {
+  background: none;
+}
+.ui.left.sidebar .logo {
+  align-items: center;
+  display: flex;
+  justify-content: left;
+  padding: 0.5em 0;
+}
+.ui.left.sidebar .logo h3 {
+  margin: 0 0 0 0.75em;
+}
+.ui.table.overflow-auto {
+  overflow: auto;
+}
+.ui.table.overflow-auto > .ui.table {
+  border: none;
+}
+.cell-expanded {
+  min-width: 320px;
+  max-width: 640px;
+  white-space: normal;
+}
+.overlay.pushable {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 102;
+}
+.overlay.pushable .pusher:after {
+  height: 100%;
+  opacity: 1;
+  width: 100%;
+}
+.example {
+  position: relative;
+}
+.example:not(:last-child) {
+  margin-bottom: 3em;
+}
+.example .exampleCodeBox {
+  padding: 0;
+}
+.example .exampleCodeBox .exampleCode {
+  height: 50vh;
+}
+.example .exampleCodeBox .exampleCode ~ * {
+  margin: 0;
+}
+.example .exampleMenu.ui.menu {
+  font-size: 0.875rem;
+}
+.example .examplePreview {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.example .examplePreview.ui[class*="very padded"].segment {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.example .examplePreview header {
+  flex-grow: 0;
+}
+.example .examplePreview .exampleLayout {
+  flex-grow: 1;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  position: relative;
+  width: 100%;
+}
+.example .examplePreview .exampleLayout,
+.example .examplePreview .exampleLayout[data-layout="desktop"] {
+  max-width: 100%;
+}
+.example .examplePreview .exampleLayout[data-layout="tablet"] {
+  max-width: 768px;
+}
+.example .examplePreview .exampleLayout[data-layout="mobile"] {
+  max-width: 480px;
+}
+.example .examplePreview .exampleLayout iframe {
+  background: none;
+  border: none;
+  width: 100%;
+}
+.example > .ui.rail {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+.sidebarPreview {
+  background-color: #f5f5f5;
+  content: '';
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.clearFix {
+  *zoom: 1;
+}
+.clearFix:before,
+.clearFix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+  width: 100%;
+}
+.codeFlask__textarea,
+.codeFlask__pre,
+code[class*="language-"],
+pre[class*="language-"] {
+  font-size: 0.825rem;
+}
+.show-tablet {
+  display: none !important;
+}
+@media (min-width: 1441px) {
+  .mainContainer,
+  .footer {
+    width: 40em;
+  }
+  .mainContainer .example .ui.right.rail {
+    padding: 0 0 0 40em;
+  }
+  .sidebarPreview {
+    left: 40em;
+  }
+  .ui.visible.left.sidebar ~ .topMenu {
+    padding-left: 16em;
+  }
+  .ui.visible.left.sidebar ~ .sidebarPreview {
+    left: 56em;
+  }
+  .ui.visible.left.sidebar ~ .mainContainer .example .ui.right.rail {
+    left: -19em;
+    padding: 0 0 0 56em;
+  }
+  .ui.visible.left.sidebar ~ .mainContainer,
+  .ui.visible.left.sidebar ~ .footer {
+    padding-left: 16em;
+  }
+}
+@media (max-width: 1440px) {
+  .sidebarPreview {
+    left: 40em;
+  }
+  .mainContainer .example .ui.right.rail {
+    padding: 0 0 0 40em;
+  }
+  header.topMenu.ui.menu.fixed {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    left: 0;
+    width: 100% !important;
+  }
+  .ui.left.sidebar {
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  .ui.left.sidebar.visible ~ header.topMenu.ui.menu.fixed,
+  .ui.left.sidebar.visible ~ .mainContainer,
+  .ui.left.sidebar.visible ~ footer.footer {
+    left: 0;
+    padding-left: 0;
+  }
+  .mainContainer,
+  .footer {
+    width: 40em;
+  }
+  .example > .ui.rail {
+    padding-left: 40em;
+  }
+  body.leftMenu-visible:after {
+    left: 0;
+    position: fixed;
+    top: 0;
+  }
+  body.leftMenu-visible .ui.left.sidebar {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  body.leftMenu-visible .ui.left.sidebar .leftMenuClose {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .example .examplePreview .exampleLayout iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+  .example > .ui.rail {
+    left: -3em;
+    z-index: -1;
+  }
+}
+@media (max-width: 991px) {
+  .mainContainer .example > .ui.right.rail {
+    left: 0;
+    margin-top: 3em;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  .mainContainer .example > .ui.right.rail,
+  .mainContainer .example > .ui.right.rail .examplePreview.ui[class*="very padded"].segment {
+    height: auto;
+  }
+  .mainContainer .example > .ui.right.rail .examplePreview.ui[class*="very padded"].segment {
+    padding: 0;
+  }
+  .example .examplePreview .exampleLayout iframe {
+    height: auto;
+  }
+  .mainContainer,
+  .ui.container,
+  .footer {
+    width: 100%;
+  }
+  .sidebarPreview {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .hide-tablet {
+    display: none !important;
+  }
+  .show-tablet {
+    display: block !important;
+  }
+  body.leftMenu-visible {
+    overflow: hidden;
+  }
+  .mainContainer > .ui.main.container {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+  .ui.left.sidebar {
+    width: 100%;
+  }
+}
+@media print {
+  .ui.visible.left.sidebar ~ .mainContainer,
+  .ui.visible.left.sidebar ~ footer.footer {
+    padding-left: 0;
+  }
+  .ui.left.sidebar,
+  .topMenu,
+  .topMenuGhost {
+    display: none !important;
+  }
+}
+/*# sourceMappingURL=agile-ui.css.map */
