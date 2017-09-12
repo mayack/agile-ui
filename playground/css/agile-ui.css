@@ -1,6 +1,9 @@
 @import 'semantic.min.css';
 @import 'prism.min.css';
 @import 'codeflask.css';
+body {
+  background-color: #f5f5f5;
+}
 .ui.visible.left.sidebar ~ header.topMenu.ui.menu.fixed {
   -webkit-transform: none;
   transform: none;
@@ -24,6 +27,7 @@ header.topMenu.ui.fixed.menu ~ .topMenuGhost {
 }
 footer.footer,
 .mainContainer {
+  background: #fff;
   box-sizing: content-box;
 }
 .mainContainer {
@@ -121,6 +125,7 @@ footer.footer .ui.segment {
   flex-grow: 0;
 }
 .example .examplePreview .exampleLayout {
+  box-sizing: border-box;
   flex-grow: 1;
   margin-left: auto;
   margin-right: auto;
@@ -132,30 +137,19 @@ footer.footer .ui.segment {
   width: 100%;
 }
 .example .examplePreview .exampleLayout[data-layout="tablet"] {
-  width: 768px;
+  width: 788px;
 }
 .example .examplePreview .exampleLayout[data-layout="mobile"] {
-  width: 480px;
+  width: 500px;
 }
-.example .examplePreview .exampleLayout iframe {
-  background: none;
-  border: none;
+.example .examplePreview .exampleLayout iframe.ui.segment {
+  padding: 10px;
   width: 100%;
 }
 .example > .ui.rail {
   margin: 0;
   padding: 0;
   width: 100vw;
-}
-.sidebarPreview {
-  background-color: #f5f5f5;
-  content: '';
-  height: 100%;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%;
-  z-index: 1;
 }
 .clearFix {
   *zoom: 1;
@@ -173,6 +167,9 @@ code[class*="language-"],
 pre[class*="language-"] {
   font-size: 0.825rem;
 }
+body {
+  overflow-x: inherit;
+}
 .show-tablet {
   display: none !important;
 }
@@ -184,14 +181,8 @@ pre[class*="language-"] {
   .mainContainer .example .ui.right.rail {
     padding: 0 0 0 40em;
   }
-  .sidebarPreview {
-    left: 40em;
-  }
   .ui.visible.left.sidebar ~ .topMenu {
     padding-left: 16em;
-  }
-  .ui.visible.left.sidebar ~ .sidebarPreview {
-    left: 56em;
   }
   .ui.visible.left.sidebar ~ .mainContainer .example .ui.right.rail {
     left: -19em;
@@ -203,9 +194,6 @@ pre[class*="language-"] {
   }
 }
 @media (max-width: 1440px) {
-  .sidebarPreview {
-    left: 40em;
-  }
   .mainContainer .example .ui.right.rail {
     padding: 0 0 0 40em;
   }
@@ -249,6 +237,9 @@ pre[class*="language-"] {
   }
 }
 @media (min-width: 992px) {
+  .example .examplePreview .exampleLayout {
+    border: 10px solid transparent;
+  }
   .example .examplePreview .exampleLayout iframe {
     height: 100%;
     left: 0;
@@ -282,9 +273,6 @@ pre[class*="language-"] {
   .ui.container,
   .footer {
     width: 100%;
-  }
-  .sidebarPreview {
-    display: none;
   }
 }
 @media (max-width: 767px) {

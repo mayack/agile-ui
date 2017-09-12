@@ -71,7 +71,6 @@ html.no-js(lang='')
             a.item(href='javascript:void(0)') Level 2
             a.item(href='javascript:void(0)') Level 2
             a.item(href='javascript:void(0)') Level 2
-      aside.sidebarPreview
       header.ui.fixed.horizontal.menu.topMenu
         a.icon.item.leftMenuTrigger(href='javascript:void(0)') #[i.sidebar.icon]
         .ui.category.search.item
@@ -137,9 +136,7 @@ html.no-js(lang='')
                     a.item.active(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","desktop");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.computer.icon]Desktop
                   .ui.hidden.divider
                 .exampleLayout(data-layout='desktop')
-                  //- include includes/example-form
-                  //- iframe(src='includes/example-form.html')
-                  iframe(src='includes/example-grid.html' onload="resizeIframe(this)")
+                  iframe.ui.segment(src='includes/example-grid.html' onload="resizeIframe(this)")
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius optio quaerat fugiat, eveniet incidunt quam voluptatibus vel quia illo cum aliquid perferendis tempora accusamus vitae, maxime rerum. Non, doloribus, quo.
           .example
             .ui.pointing.secondary.menu
@@ -180,7 +177,7 @@ html.no-js(lang='')
                     a.item.active(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","desktop");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.computer.icon]Desktop
                   .ui.hidden.divider
                 .exampleLayout(data-layout='desktop')
-                  iframe(src='includes/example-table.html' onload="resizeIframe(this)")
+                  iframe.ui.segment(src='includes/example-table.html' onload="resizeIframe(this)")
       footer.footer
         .ui.divider
         .ui.center.aligned.basic.segment
