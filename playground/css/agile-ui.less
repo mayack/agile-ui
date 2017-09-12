@@ -151,17 +151,17 @@ footer.footer {
       flex-grow: 1;
       margin-left: auto;
       margin-right: auto;
-      overflow: auto;
+      // overflow: auto;
       position: relative;
       width: 100%;
       &, &[data-layout="desktop"] {
-        max-width: 100%;
+        width: 100%;
       }
       &[data-layout="tablet"] {
-        max-width: @tabletWidth;
+        width: @tabletWidth;
       }
       &[data-layout="mobile"] {
-        max-width: @mobileWidth;
+        width: @mobileWidth;
       }
       iframe {
         background: none;

@@ -124,19 +124,18 @@ footer.footer .ui.segment {
   flex-grow: 1;
   margin-left: auto;
   margin-right: auto;
-  overflow: auto;
   position: relative;
   width: 100%;
 }
 .example .examplePreview .exampleLayout,
 .example .examplePreview .exampleLayout[data-layout="desktop"] {
-  max-width: 100%;
+  width: 100%;
 }
 .example .examplePreview .exampleLayout[data-layout="tablet"] {
-  max-width: 768px;
+  width: 768px;
 }
 .example .examplePreview .exampleLayout[data-layout="mobile"] {
-  max-width: 480px;
+  width: 480px;
 }
 .example .examplePreview .exampleLayout iframe {
   background: none;
