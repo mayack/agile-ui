@@ -142,7 +142,7 @@ footer.footer .ui.segment {
   min-width: 992px;
 }
 .example .examplePreview .exampleLayout[data-layout="tablet"] {
-  width: 825px;
+  max-width: 780px;
 }
 .example .examplePreview .exampleLayout[data-layout="tablet"] iframe {
   min-width: 600px;
