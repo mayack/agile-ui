@@ -129,6 +129,7 @@ footer.footer .ui.segment {
   flex-grow: 1;
   margin-left: auto;
   margin-right: auto;
+  overflow: auto;
   position: relative;
   width: 100%;
 }
