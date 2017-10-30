@@ -136,11 +136,21 @@ footer.footer .ui.segment {
 .example .examplePreview .exampleLayout[data-layout="desktop"] {
   width: 100%;
 }
+.example .examplePreview .exampleLayout iframe,
+.example .examplePreview .exampleLayout[data-layout="desktop"] iframe {
+  min-width: 992px;
+}
 .example .examplePreview .exampleLayout[data-layout="tablet"] {
   width: 825px;
 }
+.example .examplePreview .exampleLayout[data-layout="tablet"] iframe {
+  min-width: 600px;
+}
 .example .examplePreview .exampleLayout[data-layout="mobile"] {
   width: 522px;
+}
+.example .examplePreview .exampleLayout[data-layout="mobile"] iframe {
+  min-width: 0;
 }
 .example .examplePreview .exampleLayout iframe.ui.segment {
   padding: 10px;

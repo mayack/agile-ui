@@ -163,12 +163,21 @@ footer.footer {
       width: 100%;
       &, &[data-layout="desktop"] {
         width: 100%;
+        iframe {
+          min-width: @desktopWidth;
+        }
       }
       &[data-layout="tablet"] {
         width: @tabletWidth + @examplePadding*4 + 2px + 15px;
+        iframe {
+          min-width: 600px;
+        }
       }
       &[data-layout="mobile"] {
         width: @mobileWidth + @examplePadding*4 + 2px;
+        iframe {
+          min-width: 0;
+        }
       }
       iframe.ui.segment {
         padding: @examplePadding;
