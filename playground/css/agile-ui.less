@@ -160,12 +160,13 @@ footer.footer {
       margin-left: auto;
       margin-right: auto;
       overflow-x: auto;
+      overflow-y: hidden;
       position: relative;
       width: 100%;
       &, &[data-layout="desktop"] {
         width: 100%;
         iframe {
-          min-width: @desktopWidth;
+          min-width: @tabletWidth + 32px;
         }
       }
       // &[data-layout="tablet"] {
