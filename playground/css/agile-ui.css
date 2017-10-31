@@ -129,7 +129,7 @@ footer.footer .ui.segment {
   flex-grow: 1;
   margin-left: auto;
   margin-right: auto;
-  overflow: auto;
+  overflow-x: auto;
   position: relative;
   width: 100%;
 }
@@ -141,14 +141,10 @@ footer.footer .ui.segment {
 .example .examplePreview .exampleLayout[data-layout="desktop"] iframe {
   min-width: 992px;
 }
-.example .examplePreview .exampleLayout[data-layout="tablet"] {
-  max-width: 780px;
-}
-.example .examplePreview .exampleLayout[data-layout="tablet"] iframe {
-  min-width: 600px;
-}
 .example .examplePreview .exampleLayout[data-layout="mobile"] {
-  width: 522px;
+  min-width: 0;
+  max-width: 768px;
+  width: 100%;
 }
 .example .examplePreview .exampleLayout[data-layout="mobile"] iframe {
   min-width: 0;

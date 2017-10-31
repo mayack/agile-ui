@@ -131,9 +131,9 @@ html.no-js(lang='')
                 header
                   .ui.horizontal.divider #[small Example Preview]
                   .ui.three.item.secondary.menu.exampleMenu
-                    a.item(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","mobile");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.mobile.icon]Mobile
-                    a.item(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","tablet");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.tablet.icon]Tablet
                     a.item.active(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","desktop");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.computer.icon]Desktop
+                    a.item(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","mobile");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.mobile.icon]Mobile
+                    //- a.item(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","tablet");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.tablet.icon]Tablet
                   .ui.hidden.divider
                 .exampleLayout(data-layout='desktop')
                   iframe.ui.segment(src='includes/example-grid.html' onload="resizeIframe(this)")
@@ -172,9 +172,9 @@ html.no-js(lang='')
                 header
                   .ui.horizontal.divider #[small Example Preview]
                   .ui.three.item.secondary.menu.exampleMenu
-                    a.item(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","mobile");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.mobile.icon]Mobile
-                    a.item(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","tablet");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.tablet.icon]Tablet
                     a.item.active(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","desktop");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.computer.icon]Desktop
+                    a.item(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","mobile");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.mobile.icon]Mobile
+                    //- a.item(href='javascript:void(0)' onclick='$(this).parents("header").siblings(".exampleLayout").attr("data-layout","tablet");$(this).siblings(".active").removeClass("active");$(this).addClass("active");') #[i.tablet.icon]Tablet
                   .ui.hidden.divider
                 .exampleLayout(data-layout='desktop')
                   iframe.ui.segment(src='includes/example-table.html' onload="resizeIframe(this)")
