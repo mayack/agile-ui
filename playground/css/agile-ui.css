@@ -169,12 +169,6 @@ footer.footer .ui.segment {
   line-height: 0;
   width: 100%;
 }
-.codeFlask__textarea,
-.codeFlask__pre,
-code[class*="language-"],
-pre[class*="language-"] {
-  font-size: 0.825rem;
-}
 body {
   overflow-x: inherit;
 }
